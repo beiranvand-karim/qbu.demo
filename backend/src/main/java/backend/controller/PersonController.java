@@ -13,9 +13,9 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
-    @PostMapping("/create")
-    public String create(@RequestBody String firstName, @RequestBody String lastName, @RequestBody int age) {
-        Person p = personService.create(firstName, lastName, age);
+    @PostMapping("/person")
+    public String create(@RequestBody Person person) {
+        Person p = personService.create(person);
         return p.toString();
     }
 
@@ -24,12 +24,12 @@ public class PersonController {
         return personService.findByFirstName(firstName);
     }
 
-    @GetMapping("/getAll")
+    @GetMapping("/person")
     public List<Person> getAll(){
         return personService.getAll();
     }
 
-    @PutMapping("/update")
+    @PutMapping("/person")
     public String update(@RequestParam String firstName, @RequestParam String lastName, @RequestParam int age){
         Person p = personService.update(firstName, lastName, age);
         return p.toString();
@@ -41,7 +41,7 @@ public class PersonController {
         return "deleted " + firstName;
     }
 
-    @DeleteMapping("/deleteAll")
+    @DeleteMapping("/person")
     public String deleteAll() {
         personService.deleteAll();
         return "deleted all records";

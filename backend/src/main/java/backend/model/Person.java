@@ -11,6 +11,8 @@ public class Person {
     String lastName;
     int age;
 
+    public Person() { }
+
     public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
