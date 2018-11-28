@@ -1,6 +1,7 @@
 package backend.controller;
 
 import backend.model.Person;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import backend.service.PersonService;
@@ -19,9 +20,9 @@ public class PersonController {
         return p.toString();
     }
 
-    @GetMapping("/get")
-    public Person getPerson(@RequestParam String firstName){
-        return personService.findByFirstName(firstName);
+    @GetMapping("/person/{id}")
+    public Person getPerson(@PathVariable ObjectId id){
+        return personService.findById(id);
     }
 
     @GetMapping("/person")
@@ -29,16 +30,16 @@ public class PersonController {
         return personService.getAll();
     }
 
-    @PutMapping("/person")
-    public String update(@RequestParam String firstName, @RequestParam String lastName, @RequestParam int age){
-        Person p = personService.update(firstName, lastName, age);
+    @PutMapping("/person/{id}")
+    public String update(@PathVariable ObjectId id, @RequestBody Person person){
+        Person p = personService.updateById(id, person);
         return p.toString();
     }
 
-    @DeleteMapping("/delete")
-    public String delete(@RequestParam String firstName){
-        personService.delete(firstName);
-        return "deleted " + firstName;
+    @DeleteMapping("/person/{id}")
+    public String delete(@PathVariable ObjectId id){
+        personService.deleteById(id);
+        return "deleted " + id;
     }
 
     @DeleteMapping("/person")
