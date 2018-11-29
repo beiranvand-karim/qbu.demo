@@ -27,7 +27,7 @@ frontend/yarn-error.log*
 
 # lock files
 frontend/yarn.lock
-
+frontend/package-lock.json
 
 
 
