@@ -7,11 +7,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Question {
     @Id
-    private
     ObjectId id;
-    private String text;
-    private String title;
-    private Float prize;
+    String text;
+    String title;
+    Float prize;
 
     public Question() {
     }
