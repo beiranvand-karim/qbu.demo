@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
+import {Link} from "react-router-dom"
 
-class CreateQuestion extends Component {
+export class CreateQuestion extends Component {
   render() {
     return (
       <>
         <h1>create question page</h1>
+        <Link to="/">see questions</Link>
       </>
     )
   }

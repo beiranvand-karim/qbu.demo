@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should matches the snapshot 1`] = `
+Array [
+  <h1>
+    create question page
+  </h1>,
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    see questions
+  </a>,
+]
+`;

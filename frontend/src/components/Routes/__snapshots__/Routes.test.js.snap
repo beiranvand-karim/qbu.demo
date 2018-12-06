@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Routes /> should matches the snapshot 1`] = `
+Array [
+  <h1>
+    home page
+  </h1>,
+  <a
+    href="/createQuestion"
+    onClick={[Function]}
+  >
+    create a question
+  </a>,
+]
+`;
