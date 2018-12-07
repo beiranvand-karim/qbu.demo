@@ -1,15 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should matches the snapshot 1`] = `
-Array [
-  <h1>
-    create question page
-  </h1>,
-  <a
-    href="/"
-    onClick={[Function]}
+exports[`<CreateQuestion/> should matches the snapshot 1`] = `
+<div
+  className="createQuestionFormContainer"
+>
+  <form
+    className="createQuestionForm"
+    onSubmit={[Function]}
   >
-    see questions
-  </a>,
-]
+    <div
+      className="formGroup position-relative form-group"
+    >
+      <label
+        className=""
+        htmlFor="title"
+      >
+        title
+      </label>
+      <input
+        className="formGroup formGroup_input form-control"
+        id="title"
+        name="title"
+        onChange={[Function]}
+        placeholder="write a question title"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="formGroup position-relative form-group"
+    >
+      <label
+        className=""
+        htmlFor="text"
+      >
+        text
+      </label>
+      <textarea
+        className="formGroup formGroup_input form-control"
+        id="text"
+        name="text"
+        onChange={[Function]}
+        placeholder="write a description"
+        rows={5}
+        value=""
+      />
+    </div>
+    <div
+      className="formGroup position-relative form-group"
+    >
+      <label
+        className=""
+        htmlFor="prize"
+      >
+        prize
+      </label>
+      <input
+        className="formGroup formGroup_input form-control"
+        id="prize"
+        name="prize"
+        onChange={[Function]}
+        placeholder="write a question title"
+        type="text"
+        value={0}
+      />
+    </div>
+    <button
+      aria-label={null}
+      className="btn btn-secondary"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </form>
+</div>
 `;

@@ -1,7 +1,7 @@
 import {MemoryRouter} from "react-router-dom"
 import {mount, shallow} from "enzyme"
 import React from 'react'
-import  {Provider} from 'react-redux'
+import {Provider} from 'react-redux'
 import {store} from "../../store"
 import {Routes} from "./index"
 import Home from "../Home"

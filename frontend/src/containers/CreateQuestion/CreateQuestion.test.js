@@ -1,14 +1,18 @@
 import {shallow} from 'enzyme'
 import React from "react"
-import Index from "./index";
+import {CreateQuestion} from "./"
 import renderer from 'react-test-renderer'
-import {MemoryRouter} from "react-router-dom";
+import {MemoryRouter} from "react-router-dom"
 
-it ('should render without crashing', () => {
-  shallow(<Index/>)
-});
+describe('<CreateQuestion/>', () => {
 
-it('should matches the snapshot', () => {
-  const tree = renderer.create(<MemoryRouter><Index /></MemoryRouter>).toJSON();
-  expect(tree).toMatchSnapshot()
+   it('should render without crashing', () => {
+      shallow(<CreateQuestion/>)
+   });
+
+   it('should matches the snapshot', () => {
+      const tree = renderer.create(<MemoryRouter><CreateQuestion/></MemoryRouter>).toJSON();
+      expect(tree).toMatchSnapshot()
+   });
+
 });

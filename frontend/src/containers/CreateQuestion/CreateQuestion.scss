@@ -1,0 +1,12 @@
+
+.createQuestionFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formGroup {
+  &_input {
+    width: 300px !important;
+  }
+}
