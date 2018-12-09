@@ -11,14 +11,22 @@ import {
 
 export class CreateQuestion extends Component {
 
-   createQuestion = (question) => {
-      console.log(this);
+   constructor() {
+      super();
+      this.createQuestion = this.createQuestion.bind(this);
+      this.createQuestionFormSubmission = this.createQuestionFormSubmission.bind(this);
+      this.change = this.change.bind(this)
+   }
+
+   createQuestion(question) {
       this.props.createQuestionBegin();
       fetch(`${config.server}/question`, {
          method: "POST",
+         mode: "no-cors",
          headers: {
             "cache-control": "no-cache",
             "Content-Type": "application/json",
+            "Authorization": "Basic " + btoa("demo" + ":" + "test2")
          },
          body: JSON.stringify(question),
       })
@@ -27,7 +35,7 @@ export class CreateQuestion extends Component {
          .catch(error => this.props.createQuestionError(error))
    };
 
-   createQuestionFormSubmission = (event) => {
+   createQuestionFormSubmission(event) {
       event.preventDefault();
       const {title, text, prize} = this.state;
       const question = {title, text, prize};
@@ -40,7 +48,7 @@ export class CreateQuestion extends Component {
      prize: 0
    };
 
-   change = (e) => {
+   change(e){
       this.setState({
          [e.target.name]: e.target.value
       })

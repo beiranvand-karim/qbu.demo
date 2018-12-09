@@ -1,6 +1,6 @@
 import {Route, Switch} from "react-router-dom"
 import Home from "../Home"
-import {CreateQuestion} from "../../containers/CreateQuestion"
+import CreateQuestion from "../../containers/CreateQuestion"
 import React from "react"
 
 
