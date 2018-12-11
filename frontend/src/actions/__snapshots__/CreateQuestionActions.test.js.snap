@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateQuestionActions should matches the create question begin snapshot 1`] = `
+Array [
+  Object {
+    "type": "CREATE_QUESTION_BEGIN",
+  },
+]
+`;
+
+exports[`CreateQuestionActions should matches the create question error snapshot 1`] = `
+Array [
+  Object {
+    "payload": "some error",
+    "type": "CREATE_QUESTION_ERROR",
+  },
+]
+`;
+
+exports[`CreateQuestionActions should matches the create question success snapshot 1`] = `
+Array [
+  Object {
+    "payload": "some data",
+    "type": "CREATE_QUESTION_SUCCESS",
+  },
+]
+`;

@@ -16,7 +16,7 @@ exports[`<SignIn/> should matches the snapshot 1`] = `
           className=""
           htmlFor="userName"
         >
-          userName
+          user name
         </label>
         <input
           className="formGroup formGroup_input form-control"
@@ -35,14 +35,14 @@ exports[`<SignIn/> should matches the snapshot 1`] = `
           className=""
           htmlFor="passWord"
         >
-          passWord
+          pass word
         </label>
         <input
           className="formGroup formGroup_input form-control"
           id="passWord"
           name="passWord"
           onChange={[Function]}
-          placeholder="write a question title"
+          placeholder="pass word"
           type="text"
           value=""
         />

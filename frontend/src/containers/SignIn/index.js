@@ -62,7 +62,7 @@ export class SignIn extends Component {
                <div className="SignInFormContainer">
                   <Form onSubmit={this.SignInFormSubmission} className="SignInForm">
                      <FormGroup className="formGroup">
-                        <Label for="userName">userName</Label>
+                        <Label for="userName">user name</Label>
                         <Input value={this.state.userName}
                                onChange={this.change}
                                className="formGroup formGroup_input"
@@ -72,12 +72,12 @@ export class SignIn extends Component {
                                placeholder="user name"/>
                      </FormGroup>
                      <FormGroup className="formGroup">
-                        <Label for="passWord">passWord</Label>
+                        <Label for="passWord">pass word</Label>
                         <Input value={this.state.passWord}
                                onChange={this.change}
                                className="formGroup formGroup_input"
                                type="text" name="passWord" id="passWord"
-                               placeholder="write a question title"/>
+                               placeholder="pass word"/>
                      </FormGroup>
 
                      <Button>Submit</Button>

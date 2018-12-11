@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignInActions should matches the check sign in begin snapshot 1`] = `
+Array [
+  Object {
+    "type": "CHECK_SIGN_IN_BEGIN",
+  },
+]
+`;
+
+exports[`SignInActions should matches the check sign in error snapshot 1`] = `
+Array [
+  Object {
+    "payload": "this is a error",
+    "type": "CHECK_SIGN_IN_ERROR",
+  },
+]
+`;
+
+exports[`SignInActions should matches the check sign in success snapshot 1`] = `
+Array [
+  Object {
+    "payload": "cc0f80d7-ca5c-4c97-aa45-8ee02a5b80de",
+    "type": "CHECK_SIGN_IN_SUCCESS",
+  },
+]
+`;
