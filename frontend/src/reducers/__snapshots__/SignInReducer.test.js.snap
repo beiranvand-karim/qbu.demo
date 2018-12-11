@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignInReducer should matches the check sign in error state 1`] = `
+Object {
+  "error": "this is a error",
+  "loading": false,
+  "loggedIn": false,
+}
+`;
+
+exports[`SignInReducer should matches the check sign in successful state 1`] = `
+Object {
+  "error": null,
+  "loading": false,
+  "loggedIn": true,
+}
+`;
+
+exports[`SignInReducer should matches the initial state 1`] = `
+Object {
+  "error": null,
+  "loading": false,
+  "loggedIn": false,
+}
+`;
+
+exports[`SignInReducer should should matches the check sign in begin state 1`] = `
+Object {
+  "error": null,
+  "loading": true,
+  "loggedIn": false,
+}
+`;

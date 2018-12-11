@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateQuestionReducer should matches the create question begin state 1`] = `
+Object {
+  "data": null,
+  "error": null,
+  "loading": true,
+}
+`;
+
+exports[`CreateQuestionReducer should matches the create question error state 1`] = `
+Object {
+  "data": null,
+  "error": "this is a error",
+  "loading": false,
+}
+`;
+
+exports[`CreateQuestionReducer should matches the create question successful state 1`] = `
+Object {
+  "data": "cc0f80d7-ca5c-4c97-aa45-8ee02a5b80de",
+  "error": null,
+  "loading": false,
+}
+`;
+
+exports[`CreateQuestionReducer should matches the initial state 1`] = `
+Object {
+  "data": null,
+  "error": null,
+  "loading": false,
+}
+`;

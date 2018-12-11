@@ -31,7 +31,7 @@ export default function SignInReducer(state = initialState, action) {
          return {
             ...state,
             loading: false,
-            error: state.error,
+            error: action.error,
          };
 
       default:

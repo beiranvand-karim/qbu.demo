@@ -25,7 +25,7 @@ export default function CreateQuestionReducer(state = initialState, action) {
             ...state,
             loading: false,
             error: null,
-            data: state.payload
+            data: action.payload
          };
 
       case CREATE_QUESTION_ERROR:
@@ -33,7 +33,7 @@ export default function CreateQuestionReducer(state = initialState, action) {
          return {
             ...state,
             loading: false,
-            error: state.error,
+            error: action.error,
             data: null
          };
 
