@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignIn/> should matches the snapshot 1`] = `
+<div>
+  <div
+    className="SignInFormContainer"
+  >
+    <form
+      className="SignInForm"
+      onSubmit={[Function]}
+    >
+      <div
+        className="formGroup position-relative form-group"
+      >
+        <label
+          className=""
+          htmlFor="userName"
+        >
+          userName
+        </label>
+        <input
+          className="formGroup formGroup_input form-control"
+          id="userName"
+          name="userName"
+          onChange={[Function]}
+          placeholder="user name"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="formGroup position-relative form-group"
+      >
+        <label
+          className=""
+          htmlFor="passWord"
+        >
+          passWord
+        </label>
+        <input
+          className="formGroup formGroup_input form-control"
+          id="passWord"
+          name="passWord"
+          onChange={[Function]}
+          placeholder="write a question title"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        onClick={[Function]}
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+`;

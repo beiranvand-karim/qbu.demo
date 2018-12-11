@@ -7,6 +7,8 @@ export class Home extends Component {
       <>
         <h1>home page</h1>
         <Link to="/createQuestion">create a question</Link>
+         <br/>
+        <Link to="/signIn">sign in</Link>
       </>
     )
   }

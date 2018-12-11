@@ -26,7 +26,7 @@ export class CreateQuestion extends Component {
          headers: {
             "cache-control": "no-cache",
             "Content-Type": "application/json",
-            "Authorization": "Basic " + btoa("demo" + ":" + "test2")
+            "Authorization": "Basic " + btoa("demo:test2")
          },
          body: JSON.stringify(question),
       })
