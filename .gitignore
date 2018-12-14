@@ -35,6 +35,9 @@ frontend/package-lock.json
 backend/.gradle
 backend/build/
 backend/!gradle/wrapper/gradle-wrapper.jar
+backend/.mvn
+backend/bin
+backend/target
 
 ### STS ###
 backend/.apt_generated

@@ -8,8 +8,8 @@ import './SignIn.scss'
 
 export class SignIn extends Component {
 
-   constructor() {
-      super();
+   constructor(props) {
+      super(props);
       this.SignInFormSubmission = this.SignInFormSubmission.bind(this);
       this.change = this.change.bind(this)
    }

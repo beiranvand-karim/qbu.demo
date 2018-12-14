@@ -11,8 +11,8 @@ import {
 
 export class CreateQuestion extends Component {
 
-   constructor() {
-      super();
+   constructor(props) {
+      super(props);
       this.createQuestion = this.createQuestion.bind(this);
       this.createQuestionFormSubmission = this.createQuestionFormSubmission.bind(this);
       this.change = this.change.bind(this)
@@ -22,11 +22,9 @@ export class CreateQuestion extends Component {
       this.props.createQuestionBegin();
       fetch(`${config.server}/question`, {
          method: "POST",
-         mode: "no-cors",
          headers: {
-            "cache-control": "no-cache",
             "Content-Type": "application/json",
-            "Authorization": "Basic " + btoa("demo:test2")
+            "x-auth-token": this.props.token
          },
          body: JSON.stringify(question),
       })
@@ -100,6 +98,7 @@ const mapDispatchToProps = dispatch => ({
 });
 const mapStateToProps = state => ({
    loading: state.createQuestionState.loading,
-   error: state.createQuestionState.error
+   error: state.createQuestionState.error,
+   token: state.signInState.token
 });
 export default connect(mapStateToProps, mapDispatchToProps)(CreateQuestion);
