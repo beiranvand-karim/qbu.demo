@@ -1,10 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SignInReducer should matches the check sign in begin state 1`] = `
+Object {
+  "error": null,
+  "loading": true,
+  "loggedIn": false,
+  "token": null,
+}
+`;
+
 exports[`SignInReducer should matches the check sign in error state 1`] = `
 Object {
-  "error": "this is a error",
+  "error": undefined,
   "loading": false,
   "loggedIn": false,
+  "token": null,
 }
 `;
 
@@ -13,6 +23,7 @@ Object {
   "error": null,
   "loading": false,
   "loggedIn": true,
+  "token": "ae6b174a-4259-4f02-a302-3dd3ca555414",
 }
 `;
 
@@ -21,13 +32,6 @@ Object {
   "error": null,
   "loading": false,
   "loggedIn": false,
-}
-`;
-
-exports[`SignInReducer should should matches the check sign in begin state 1`] = `
-Object {
-  "error": null,
-  "loading": true,
-  "loggedIn": false,
+  "token": null,
 }
 `;

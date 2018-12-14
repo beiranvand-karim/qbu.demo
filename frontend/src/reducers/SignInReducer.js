@@ -7,7 +7,8 @@ import {
 const initialState = {
    loading: false,
    error: null,
-   loggedIn: false
+   loggedIn: false,
+   token: null
 };
 
 export default function SignInReducer(state = initialState, action) {
@@ -15,23 +16,22 @@ export default function SignInReducer(state = initialState, action) {
       case CHECK_SIGN_IN_BEGIN:
          return {
             ...state,
-            loading: true,
-            error: null,
+            loading: true
          };
 
       case CHECK_SIGN_IN_SUCCESS:
          return {
             ...state,
             loading: false,
-            error: null,
-            loggedIn: true
+            loggedIn: true,
+            token: action.payload
          };
 
       case CHECK_SIGN_IN_ERROR:
          return {
             ...state,
             loading: false,
-            error: action.error,
+            error: action.payload
          };
 
       default:

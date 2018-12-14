@@ -9,18 +9,19 @@ import SignInReducer from './SignInReducer'
 describe('SignInReducer', () => {
 
    it('should matches the initial state', () => {
-      const action = { type: 'DUMMY_ACTION' };
+      const action = {type: 'DUMMY_ACTION'};
       expect(SignInReducer(undefined, action)).toMatchSnapshot()
    });
 
-   it('should should matches the check sign in begin state', () => {
-      const action = { type: CHECK_SIGN_IN_BEGIN};
+   it('should matches the check sign in begin state', () => {
+      const action = {type: CHECK_SIGN_IN_BEGIN};
       expect(SignInReducer(undefined, action)).toMatchSnapshot()
    });
 
    it('should matches the check sign in successful state', () => {
       const action = {
-         type: CHECK_SIGN_IN_SUCCESS
+         type: CHECK_SIGN_IN_SUCCESS,
+         payload: 'ae6b174a-4259-4f02-a302-3dd3ca555414'
       };
       expect(SignInReducer(undefined, action)).toMatchSnapshot()
    });
