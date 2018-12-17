@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuestionListActions should matches the question list begin snapshot 1`] = `
+Array [
+  Object {
+    "type": "FETCH_QUESTION_LIST_BEGIN",
+  },
+]
+`;
+
+exports[`QuestionListActions should matches the question list error snapshot 1`] = `
+Array [
+  Object {
+    "payload": "this is a error",
+    "type": "FETCH_QUESTION_LIST_ERROR",
+  },
+]
+`;
+
+exports[`QuestionListActions should matches the question list success snapshot 1`] = `
+Array [
+  Object {
+    "payload": Array [
+      Object {
+        "id": 7,
+        "prize": 45000,
+        "text": "this is description",
+        "title": "this is title",
+        "userId": 7,
+        "username": "admin",
+      },
+    ],
+    "type": "FETCH_QUESTION_LIST_SUCCESS",
+  },
+]
+`;

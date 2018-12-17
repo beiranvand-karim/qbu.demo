@@ -3,6 +3,7 @@ import Home from "../Home"
 import CreateQuestion from "../../containers/CreateQuestion"
 import React from "react"
 import SignIn from "../../containers/SignIn"
+import QuestionListPage from "../../containers/QuestionListPage"
 
 
 export const Routes = () => (
@@ -11,5 +12,6 @@ export const Routes = () => (
       <Route path="/createQuestion" component={CreateQuestion} />
       <Route path="/home" component={Home} />
       <Route path="/signIn" component={SignIn} />
+      <Route path="/questionListPage" component={QuestionListPage} />
    </Switch>
 );

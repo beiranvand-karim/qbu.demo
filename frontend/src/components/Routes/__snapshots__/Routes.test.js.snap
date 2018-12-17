@@ -18,5 +18,12 @@ Array [
   >
     sign in
   </a>,
+  <br />,
+  <a
+    href="/questionListPage"
+    onClick={[Function]}
+  >
+    question list page
+  </a>,
 ]
 `;

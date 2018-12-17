@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QuestionListItem /> should matches the snapshot 1`] = `
+<div
+  className="sc-bdVaJa gDhQkR"
+>
+  <div
+    className="sc-bwzfXH eiaxpn"
+  >
+    <div
+      className="jumbotron"
+    >
+      <h1
+        className="display-6"
+      >
+        who is the best soccer player?
+      </h1>
+      <p
+        className="lead"
+      >
+        admin
+      </p>
+      <p
+        className="lead"
+      >
+        2000
+      </p>
+      <hr
+        className="my-2"
+      />
+      <p>
+        we want to know who is curently the best soccer player ther is?
+      </p>
+      <p
+        className="lead"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-primary"
+          onClick={[Function]}
+        >
+          see all answers
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
+`;

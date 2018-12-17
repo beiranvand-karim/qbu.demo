@@ -1,3 +1,4 @@
+/* global describe, it, expect*/
 import {MemoryRouter} from "react-router-dom"
 import {mount, shallow} from "enzyme"
 import React from 'react'
@@ -7,7 +8,8 @@ import {Routes} from "./index"
 import Home from "../Home"
 import {CreateQuestion} from "../../containers/CreateQuestion"
 import renderer from "react-test-renderer"
-import {SignIn} from "../../containers/SignIn";
+import {SignIn} from "../../containers/SignIn"
+import {QuestionListPage} from "../../containers/QuestionListPage"
 
 
 describe('<Routes />', () => {
@@ -51,6 +53,15 @@ describe('<Routes />', () => {
       expect(comp.find(Home)).toHaveLength(0);
       expect(comp.find(CreateQuestion)).toHaveLength(0);
       expect(comp.find(SignIn)).toHaveLength(1);
+   });
+
+   it('should route to /questionListPage', () => {
+      const path = '/questionListPage';
+      const comp = wrapper(path);
+      expect(comp.find(Home)).toHaveLength(0);
+      expect(comp.find(CreateQuestion)).toHaveLength(0);
+      expect(comp.find(SignIn)).toHaveLength(0);
+      expect(comp.find(QuestionListPage)).toHaveLength(1);
    });
 
    it('should matches the snapshot', () => {

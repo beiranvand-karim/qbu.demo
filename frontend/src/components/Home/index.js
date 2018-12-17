@@ -9,9 +9,11 @@ export class Home extends Component {
         <Link to="/createQuestion">create a question</Link>
          <br/>
         <Link to="/signIn">sign in</Link>
+         <br/>
+         <Link to="/questionListPage">question list page</Link>
       </>
     )
   }
 }
 
-export default Home;
+export default Home
