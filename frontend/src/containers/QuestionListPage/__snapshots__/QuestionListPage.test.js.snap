@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QuestionListPage /> should matches the loading data snapshot 1`] = `
+<h1>
+  loading ...
+</h1>
+`;

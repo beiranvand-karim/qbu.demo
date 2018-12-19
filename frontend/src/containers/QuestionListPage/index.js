@@ -13,6 +13,7 @@ export class QuestionListPage extends Component {
    };
 
    componentDidMount() {
+      this.setState({loading: true});
       fetch(`${config.server}/question`, {
          method: "GET",
          headers: {
@@ -23,12 +24,17 @@ export class QuestionListPage extends Component {
          .then(resp => resp.json())
          .then(data => {
             if (Array.isArray(data)) {
+               this.setState({loading: false});
                this.setState({data})
             } else {
+               this.setState({loading: false});
                this.setState({error: data.error})
             }
          })
-         .catch(error => this.setState({error}))
+         .catch(error => {
+            this.setState({loading: false});
+            this.setState({error})
+         })
    }
 
    render() {
