@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignUp /> should matches the snapshot 1`] = `
+<div
+  className="sc-bdVaJa gtqnvx"
+>
+  <form
+    className=""
+    onSubmit={[Function]}
+  >
+    <div
+      className="position-relative form-group"
+    >
+      <label
+        className=""
+        htmlFor="firstName"
+      >
+        first name
+      </label>
+      <input
+        className="form-control"
+        id="firstName"
+        name="firstName"
+        onChange={[Function]}
+        placeholder="first name"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="position-relative form-group"
+    >
+      <label
+        className=""
+        htmlFor="lastName"
+      >
+        last name
+      </label>
+      <input
+        className="form-control"
+        id="lastName"
+        name="lastName"
+        onChange={[Function]}
+        placeholder="last name"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="position-relative form-group"
+    >
+      <label
+        className=""
+        htmlFor="username"
+      >
+        username
+      </label>
+      <input
+        className="form-control"
+        id="username"
+        name="username"
+        onChange={[Function]}
+        placeholder="username"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="position-relative form-group"
+    >
+      <label
+        className=""
+        htmlFor="password"
+      >
+        password
+      </label>
+      <input
+        className="form-control"
+        id="password"
+        name="password"
+        onChange={[Function]}
+        placeholder="password"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      className="position-relative form-group"
+    >
+      <label
+        className=""
+        htmlFor="email"
+      >
+        email
+      </label>
+      <input
+        className="form-control"
+        id="email"
+        name="email"
+        onChange={[Function]}
+        placeholder="email"
+        type="email"
+        value=""
+      />
+    </div>
+    <div
+      className="position-relative form-group"
+    >
+      <label
+        className=""
+        htmlFor="phone"
+      >
+        phone
+      </label>
+      <input
+        className="form-control"
+        id="phone"
+        name="phone"
+        onChange={[Function]}
+        placeholder="phone"
+        type="text"
+        value=""
+      />
+    </div>
+    <button
+      aria-label={null}
+      className="btn btn-secondary"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </form>
+</div>
+`;

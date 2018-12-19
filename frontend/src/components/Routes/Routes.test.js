@@ -10,6 +10,7 @@ import {CreateQuestion} from "../../containers/CreateQuestion"
 import renderer from "react-test-renderer"
 import {SignIn} from "../../containers/SignIn"
 import {QuestionListPage} from "../../containers/QuestionListPage"
+import SignUp from "../SignUp"
 
 
 describe('<Routes />', () => {
@@ -62,6 +63,17 @@ describe('<Routes />', () => {
       expect(comp.find(CreateQuestion)).toHaveLength(0);
       expect(comp.find(SignIn)).toHaveLength(0);
       expect(comp.find(QuestionListPage)).toHaveLength(1);
+   });
+
+
+   it('should route to /signUp', () => {
+      const path = '/signUp';
+      const comp = wrapper(path);
+      expect(comp.find(Home)).toHaveLength(0);
+      expect(comp.find(CreateQuestion)).toHaveLength(0);
+      expect(comp.find(SignIn)).toHaveLength(0);
+      expect(comp.find(QuestionListPage)).toHaveLength(0);
+      expect(comp.find(SignUp)).toHaveLength(1);
    });
 
    it('should matches the snapshot', () => {

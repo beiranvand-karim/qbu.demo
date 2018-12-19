@@ -11,6 +11,8 @@ export class Home extends Component {
         <Link to="/signIn">sign in</Link>
          <br/>
          <Link to="/questionListPage">question list page</Link>
+         <br/>
+         <Link to="/signUp">sign up</Link>
       </>
     )
   }
