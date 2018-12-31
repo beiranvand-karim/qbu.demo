@@ -29,7 +29,13 @@ export class CreateQuestion extends Component {
          body: JSON.stringify(question),
       })
          .then(res => res.json())
-         .then(data => this.props.createQuestionSuccess(data))
+         .then(data => {
+            if (data.status || data.status > 400) {
+               this.props.createQuestionError(data.error)
+            } else {
+               this.props.createQuestionSuccess(data)
+            }
+         })
          .catch(error => this.props.createQuestionError(error))
    };
 
@@ -53,6 +59,23 @@ export class CreateQuestion extends Component {
    };
 
    render() {
+
+      if (this.props.loading) {
+         return <h1>loading...</h1>
+      }
+
+      if(this.props.error) {
+         return <h1>error: {this.props.error}</h1>
+      }
+
+      if (this.props.data) {
+         return <>
+            <h1>question created:</h1>
+            <h3>title: {this.props.data.title}</h3>
+            <h3>description: {this.props.data.title}</h3>
+            <h3>prize: {this.props.data.prize}</h3>
+         </>
+      }
       return (
          <>
             <div className="createQuestionFormContainer">
@@ -99,6 +122,7 @@ const mapDispatchToProps = dispatch => ({
 const mapStateToProps = state => ({
    loading: state.createQuestionState.loading,
    error: state.createQuestionState.error,
+   data: state.createQuestionState.data,
    token: state.signInState.token
 });
 export default connect(mapStateToProps, mapDispatchToProps)(CreateQuestion);

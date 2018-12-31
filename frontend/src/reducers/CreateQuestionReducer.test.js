@@ -28,7 +28,7 @@ describe('CreateQuestionReducer', () => {
    it('should matches the create question error state', () => {
       const action = {
          type: CREATE_QUESTION_ERROR,
-         error: 'this is a error'
+         payload: 'this is a error'
       };
       expect(CreateQuestionReducer(undefined, action)).toMatchSnapshot()
    });
