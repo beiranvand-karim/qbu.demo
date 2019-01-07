@@ -73,7 +73,7 @@ describe('<CreateQuestion/>', () => {
    });
 
    it('should matches the snapshot', () => {
-      const tree = renderer.create(<MemoryRouter><CreateQuestion/></MemoryRouter>).toJSON();
+      const tree = renderer.create(<MemoryRouter><CreateQuestion /></MemoryRouter>).toJSON();
       expect(tree).toMatchSnapshot()
    });
 

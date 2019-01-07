@@ -8,6 +8,11 @@ import {
    createQuestionError,
    createQuestionSuccess
 } from '../../actions/CreateQuestionActions'
+import {CreateQuestionOptionList} from "../../components/CreateQuestionOptionList"
+import {
+   insertCreateQuestionOptionImage,
+   removeCreateQuestionOptionImage
+} from "../../actions/CreateQuestionOptionActions"
 
 export class CreateQuestion extends Component {
 
@@ -42,29 +47,31 @@ export class CreateQuestion extends Component {
    createQuestionFormSubmission(event) {
       event.preventDefault();
       const {title, text, prize} = this.state;
-      const question = {title, text, prize};
+      const {images} = this.props;
+      const question = {title, text, prize, images};
       this.createQuestion(question);
    };
 
    state = {
-     title: '',
-     text: '',
-     prize: 0
+      title: '',
+      text: '',
+      prize: 0,
+      options: 4
    };
 
-   change(e){
+   change(e) {
       this.setState({
          [e.target.name]: e.target.value
       })
    };
 
    render() {
-
+      const {options} = this.state;
       if (this.props.loading) {
          return <h1>loading...</h1>
       }
 
-      if(this.props.error) {
+      if (this.props.error) {
          return <h1>error: {this.props.error}</h1>
       }
 
@@ -106,6 +113,17 @@ export class CreateQuestion extends Component {
                             className="formGroup formGroup_input" type="text" name="prize" id="prize"
                             placeholder="write a question title"/>
                   </FormGroup>
+                  <FormGroup className="formGroup">
+                     <Label for="options">options</Label>
+                     <Input value={this.state.options}
+                            onChange={this.change}
+                            className="formGroup formGroup_input" type="text" name="options" id="options"
+                            placeholder="how many options?"/>
+                  </FormGroup>
+                     <CreateQuestionOptionList
+                        insertCreateQuestionOptionImage={this.props.insertCreateQuestionOptionImage}
+                        removeCreateQuestionOptionImage={this.props.removeCreateQuestionOptionImage}
+                        options={options} />
                   <Button>Submit</Button>
                </Form>
             </div>
@@ -118,11 +136,15 @@ const mapDispatchToProps = dispatch => ({
    createQuestionError: (error) => dispatch(createQuestionError(error)),
    createQuestionSuccess: (json) => dispatch(createQuestionSuccess(json)),
    createQuestionBegin: () => dispatch(createQuestionBegin()),
+   // todo change this to context API
+   insertCreateQuestionOptionImage: (image) => dispatch(insertCreateQuestionOptionImage(image)),
+   removeCreateQuestionOptionImage: (image) => dispatch(removeCreateQuestionOptionImage(image))
 });
 const mapStateToProps = state => ({
    loading: state.createQuestionState.loading,
    error: state.createQuestionState.error,
    data: state.createQuestionState.data,
-   token: state.signInState.token
+   token: state.signInState.token,
+   images: state.createQuestionOptionState.images
 });
 export default connect(mapStateToProps, mapDispatchToProps)(CreateQuestion);

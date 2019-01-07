@@ -1,6 +1,6 @@
 import React from 'react'
-import FlexWrapper from "../StyledComponents/FlexWrapper"
-import Question from "../StyledComponents/Question"
+import FlexWrapper from "../../StyledComponents/FlexWrapper"
+import Question from "../../StyledComponents/Question"
 import {Button, Jumbotron} from "reactstrap"
 
 export const QuestionListItem = (question) => {

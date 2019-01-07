@@ -65,6 +65,49 @@ exports[`<CreateQuestion/> should matches the snapshot 1`] = `
         value={0}
       />
     </div>
+    <div
+      className="formGroup position-relative form-group"
+    >
+      <label
+        className=""
+        htmlFor="options"
+      >
+        options
+      </label>
+      <input
+        className="formGroup formGroup_input form-control"
+        id="options"
+        name="options"
+        onChange={[Function]}
+        placeholder="how many options?"
+        type="text"
+        value={4}
+      />
+    </div>
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+    </div>
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+    </div>
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+    </div>
+    <div>
+      <input
+        onChange={[Function]}
+        type="file"
+      />
+    </div>
     <button
       aria-label={null}
       className="btn btn-secondary"

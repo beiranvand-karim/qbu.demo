@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Button, Input, Label, FormGroup, Form} from "reactstrap"
 import config from "../../config"
-import PageCenter from "../StyledComponents/PageCenter"
+import PageCenter from "../../StyledComponents/PageCenter"
 
 const empty = '';
 
