@@ -4,6 +4,7 @@ package com.bookstore.resource;
 import com.bookstore.domain.Question;
 import com.bookstore.domain.QuestionPreview;
 import com.bookstore.domain.User;
+import com.bookstore.domain.graphics.ImageFromString;
 import com.bookstore.repository.UserRepository;
 import com.bookstore.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,11 @@ public class QuestionResource {
     public Question createQuestion(@RequestBody Question question, Authentication auth) {
         User user = (User) auth.getPrincipal();
         question.setUserId(user.getId());
-        return questionService.save(question);
+        Question savedQuestion = questionService.save(question);
+        savedQuestion
+                .createDirectory()
+                .createOptionImages();
+        return savedQuestion;
     }
 
     @GetMapping

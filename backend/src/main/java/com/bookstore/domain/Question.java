@@ -1,7 +1,12 @@
 package com.bookstore.domain;
 
 
+import com.bookstore.domain.graphics.ImageFromString;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.*;
+import java.io.File;
+import java.util.List;
 
 @Entity
 @Table(name = "question")
@@ -15,6 +20,10 @@ public class Question {
     private Long prize;
     private Long userId;
 
+    @JsonInclude()
+    @Transient
+    private List<String> options;
+
     public Question() {
     }
 
@@ -26,7 +35,18 @@ public class Question {
         questionPreview.setPrize(prize);
         questionPreview.setUserId(userId);
         questionPreview.setUsername(username);
-        return  questionPreview;
+        return questionPreview;
+    }
+
+    public Question createDirectory() {
+        boolean mkdirs = new File("src/main/resources/static/question/" + id).mkdirs();
+        return this;
+    }
+
+    public void createOptionImages() {
+        for (int i = 0; i < options.size(); i++) {
+            ImageFromString.create(options.get(i), id, i);
+        }
     }
 
     public Long getId() {
@@ -67,5 +87,13 @@ public class Question {
 
     public void setPrize(Long prize) {
         this.prize = prize;
+    }
+
+    public List<String> getOptions() {
+        return options;
+    }
+
+    public void setOptions(List<String> options) {
+        this.options = options;
     }
 }

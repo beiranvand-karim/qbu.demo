@@ -38,6 +38,7 @@ backend/!gradle/wrapper/gradle-wrapper.jar
 backend/.mvn
 backend/bin
 backend/target
+backend/src/main/resources/static
 
 ### STS ###
 backend/.apt_generated
