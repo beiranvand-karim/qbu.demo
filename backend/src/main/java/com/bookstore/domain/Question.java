@@ -2,6 +2,7 @@ package com.bookstore.domain;
 
 
 import com.bookstore.domain.graphics.ImageFromString;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import javax.persistence.*;
@@ -16,13 +17,15 @@ public class Question {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
-    private String text;
     private Long prize;
     private Long userId;
 
     @JsonInclude()
     @Transient
     private List<String> options;
+
+    @JsonIgnore
+    private int optionsCount;
 
     public Question() {
     }
@@ -31,7 +34,6 @@ public class Question {
         QuestionPreview questionPreview = new QuestionPreview();
         questionPreview.setId(id);
         questionPreview.setTitle(title);
-        questionPreview.setText(text);
         questionPreview.setPrize(prize);
         questionPreview.setUserId(userId);
         questionPreview.setUsername(username);
@@ -73,14 +75,6 @@ public class Question {
         this.title = title;
     }
 
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
     public Long getPrize() {
         return prize;
     }
@@ -95,5 +89,13 @@ public class Question {
 
     public void setOptions(List<String> options) {
         this.options = options;
+    }
+
+    public int getOptionsCount() {
+        return optionsCount;
+    }
+
+    public void setOptionsCount(int optionsCount) {
+        this.optionsCount = optionsCount;
     }
 }
