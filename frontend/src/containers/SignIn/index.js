@@ -5,6 +5,7 @@ import {Link} from "react-router-dom"
 import config from "../../config"
 import {Button, Input, Label, FormGroup, Form} from "reactstrap"
 import './SignIn.scss'
+import Error from "../../components/Error";
 
 export class SignIn extends Component {
 
@@ -47,10 +48,11 @@ export class SignIn extends Component {
    render() {
       const {loggedIn, error} = this.props;
       if (error) {
-         return <div>error: {error.message}</div>
+         return <Error error={error} />
       }
 
       if (loggedIn) {
+         // todo move this into a separate component
          return <div>
             <h1>you are logged in...</h1>
             <Link to="/question list">go to question list</Link>

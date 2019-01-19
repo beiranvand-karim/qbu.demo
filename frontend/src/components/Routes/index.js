@@ -5,7 +5,7 @@ import React from "react"
 import SignIn from "../../containers/SignIn"
 import QuestionListPage from "../../containers/QuestionListPage"
 import SignUp from "../SignUp"
-
+import QuestionDetail from "../../containers/QuestionDetail"
 
 export const Routes = () => (
    <Switch>
@@ -15,5 +15,6 @@ export const Routes = () => (
       <Route path="/signIn" component={SignIn}/>
       <Route path="/questionListPage" component={QuestionListPage}/>
       <Route path="/signUp" component={SignUp} />
+      <Route path="/questionDetail/:id" render={props => <QuestionDetail {...props} />} />
    </Switch>
 );

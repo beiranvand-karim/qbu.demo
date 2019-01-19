@@ -1,13 +1,11 @@
 import React, {Component} from 'react'
-import './QuestionListPage.scss'
-import config from '../../config'
-import {connect} from 'react-redux'
-import QuestionList from "../../components/QuestionList"
+import config from "../../config"
+import {connect} from "react-redux"
+import QuestionDetailPreview from "../../components/QuestionDetailPreview"
 import Error from "../../components/Error"
 import Loading from "../../components/Loading"
 
-export class QuestionListPage extends Component {
-
+export class QuestionDetail extends Component {
    state = {
       data: null,
       loading: false,
@@ -16,7 +14,7 @@ export class QuestionListPage extends Component {
 
    componentDidMount() {
       this.setState({loading: true});
-      fetch(`${config.server}/question`, {
+      fetch(`${config.server}/question/${this.props.match.params.id}`, {
          method: "GET",
          headers: {
             "Content-Type": "application/json",
@@ -25,7 +23,7 @@ export class QuestionListPage extends Component {
       })
          .then(resp => resp.json())
          .then(data => {
-            if (Array.isArray(data)) {
+            if (!data.status) {
                this.setState({loading: false});
                this.setState({data})
             } else {
@@ -42,7 +40,7 @@ export class QuestionListPage extends Component {
    render() {
       const {data, error} = this.state;
       if(data) {
-         return <QuestionList questionList={this.state.data}/>
+         return <QuestionDetailPreview {...data}/>
       }
       if(error) {
          return <Error error={error} />
@@ -50,5 +48,6 @@ export class QuestionListPage extends Component {
       return <Loading />
    }
 }
+
 const mapStateToProps = (state) => ({token: state.signInState.token});
-export default connect(mapStateToProps)(QuestionListPage)
+export default connect(mapStateToProps)(QuestionDetail)

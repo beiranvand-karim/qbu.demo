@@ -3,6 +3,7 @@ import React from 'react'
 import {shallow} from 'enzyme'
 import {QuestionList} from './'
 import renderer from 'react-test-renderer'
+import {MemoryRouter} from "react-router-dom"
 
 describe('<QuestionList />',() => {
    const questionList = [
@@ -29,7 +30,7 @@ describe('<QuestionList />',() => {
    });
 
    it('should matches the snapshot', () => {
-      const tree = renderer.create(<QuestionList questionList={questionList}/>).toJSON();
+      const tree = renderer.create(<MemoryRouter><QuestionList questionList={questionList}/></MemoryRouter>).toJSON();
       expect(tree).toMatchSnapshot()
    });
 });

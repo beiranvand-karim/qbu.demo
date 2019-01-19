@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QuestionDetailOptionImageList /> should matches the snapshot 1`] = `
+Array [
+  <div>
+    <img
+      alt="option 1"
+      src="option 1"
+    />
+  </div>,
+  <div>
+    <img
+      alt="option 2"
+      src="option 2"
+    />
+  </div>,
+  <div>
+    <img
+      alt="option 3"
+      src="option 3"
+    />
+  </div>,
+  <div>
+    <img
+      alt="option 4"
+      src="option 4"
+    />
+  </div>,
+]
+`;

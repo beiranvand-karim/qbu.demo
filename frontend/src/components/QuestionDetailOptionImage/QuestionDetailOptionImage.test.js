@@ -1,21 +1,16 @@
 /* global describe, it, jest, expect*/
 import {shallow} from "enzyme"
-import {CreateQuestionOption} from "./"
+import {QuestionDetailOptionImage} from "./"
 import React from "react"
 import renderer from "react-test-renderer"
 import {MemoryRouter} from "react-router-dom"
 
-
-describe('<CreateQuestionOption />', () => {
-
+describe('<QuestionDetailOptionImage />', () => {
    it('should render without crashing', () => {
-      shallow(<CreateQuestionOption/>)
+      shallow(<QuestionDetailOptionImage/>)
    });
-
-   // todo write unit test fot testing image upload
-
    it('should matches the snapshot', function () {
-      const tree = renderer.create(<MemoryRouter><CreateQuestionOption/></MemoryRouter>).toJSON();
+      const tree = renderer.create(<MemoryRouter><QuestionDetailOptionImage/></MemoryRouter>).toJSON();
       expect(tree).toMatchSnapshot()
    });
 });

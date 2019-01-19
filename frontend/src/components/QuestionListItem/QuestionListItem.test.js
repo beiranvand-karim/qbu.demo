@@ -3,6 +3,7 @@ import React from 'react'
 import {shallow} from 'enzyme'
 import QuestionListItem from './'
 import renderer from 'react-test-renderer'
+import {MemoryRouter} from "react-router-dom"
 
 describe('<QuestionListItem />', () => {
    const question = {
@@ -18,7 +19,7 @@ describe('<QuestionListItem />', () => {
    });
 
    it('should matches the snapshot', () => {
-      const tree = renderer.create(<QuestionListItem {...question}/>).toJSON();
+      const tree = renderer.create(<MemoryRouter><QuestionListItem question={question}/></MemoryRouter>).toJSON();
       expect(tree).toMatchSnapshot()
    });
 });

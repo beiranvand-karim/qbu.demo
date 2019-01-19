@@ -4,9 +4,10 @@ import QuestionListItem from "../../components/QuestionListItem"
 
 export class QuestionList extends Component {
    render() {
-      return this.props.questionList.map((question, index) =>
-         <QuestionListItem key={index}  {...question}/>
-      )
+      return this.props.questionList.map((question, index) => {
+         question = Object.assign({}, {question});
+         return <QuestionListItem key={index}  {...question}/>
+      })
    }
 }
 

@@ -38,8 +38,9 @@ exports[`<QuestionListItem /> should matches the snapshot 1`] = `
           aria-label={null}
           className="btn btn-primary"
           onClick={[Function]}
+          type="button"
         >
-          see all answers
+          visit question
         </button>
       </p>
     </div>

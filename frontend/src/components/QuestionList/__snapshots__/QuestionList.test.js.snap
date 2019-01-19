@@ -39,8 +39,9 @@ Array [
             aria-label={null}
             className="btn btn-primary"
             onClick={[Function]}
+            type="button"
           >
-            see all answers
+            visit question
           </button>
         </p>
       </div>
@@ -83,8 +84,9 @@ Array [
             aria-label={null}
             className="btn btn-primary"
             onClick={[Function]}
+            type="button"
           >
-            see all answers
+            visit question
           </button>
         </p>
       </div>

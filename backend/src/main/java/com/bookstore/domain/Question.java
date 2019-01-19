@@ -18,9 +18,11 @@ public class Question {
     private Long id;
     private String title;
     private Long prize;
+
+    @JsonIgnore
     private Long userId;
 
-    @JsonInclude()
+    @JsonInclude
     @Transient
     private List<String> options;
 

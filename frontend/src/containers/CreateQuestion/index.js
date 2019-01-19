@@ -13,6 +13,8 @@ import {
    insertCreateQuestionOptionImage,
    removeCreateQuestionOptionImage
 } from "../../actions/CreateQuestionOptionActions"
+import Loading from "../../components/Loading"
+import Error from "../../components/Error"
 
 export class CreateQuestion extends Component {
 
@@ -66,13 +68,13 @@ export class CreateQuestion extends Component {
    };
 
    render() {
-      const {options} = this.state;
-      if (this.props.loading) {
-         return <h1>loading...</h1>
+      const {options, loading, error} = this.state;
+      if (loading) {
+         return <Loading/>
       }
 
-      if (this.props.error) {
-         return <h1>error: {this.props.error}</h1>
+      if (error) {
+         return <Error error={error} />
       }
 
       if (this.props.data) {
