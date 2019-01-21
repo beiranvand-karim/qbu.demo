@@ -1,7 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<QuestionDetailOptionImage /> should matches the snapshot 1`] = `
-<div>
-  <img />
+<div
+  className="position-relative form-check"
+>
+  <label
+    className="form-check-label"
+  >
+    <label
+      className=""
+    >
+      <input
+        className="form-check-input"
+        name="questionDetailRadio"
+        onChange={[Function]}
+        type="radio"
+      />
+      <img />
+    </label>
+  </label>
 </div>
 `;

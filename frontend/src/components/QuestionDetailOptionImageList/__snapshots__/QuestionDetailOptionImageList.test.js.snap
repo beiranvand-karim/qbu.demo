@@ -2,29 +2,93 @@
 
 exports[`<QuestionDetailOptionImageList /> should matches the snapshot 1`] = `
 Array [
-  <div>
-    <img
-      alt="option 1"
-      src="option 1"
-    />
+  <div
+    className="position-relative form-check"
+  >
+    <label
+      className="form-check-label"
+    >
+      <label
+        className=""
+      >
+        <input
+          className="form-check-input"
+          name="questionDetailRadio"
+          onChange={[Function]}
+          type="radio"
+        />
+        <img
+          alt="option 1"
+          src="option 1"
+        />
+      </label>
+    </label>
   </div>,
-  <div>
-    <img
-      alt="option 2"
-      src="option 2"
-    />
+  <div
+    className="position-relative form-check"
+  >
+    <label
+      className="form-check-label"
+    >
+      <label
+        className=""
+      >
+        <input
+          className="form-check-input"
+          name="questionDetailRadio"
+          onChange={[Function]}
+          type="radio"
+        />
+        <img
+          alt="option 2"
+          src="option 2"
+        />
+      </label>
+    </label>
   </div>,
-  <div>
-    <img
-      alt="option 3"
-      src="option 3"
-    />
+  <div
+    className="position-relative form-check"
+  >
+    <label
+      className="form-check-label"
+    >
+      <label
+        className=""
+      >
+        <input
+          className="form-check-input"
+          name="questionDetailRadio"
+          onChange={[Function]}
+          type="radio"
+        />
+        <img
+          alt="option 3"
+          src="option 3"
+        />
+      </label>
+    </label>
   </div>,
-  <div>
-    <img
-      alt="option 4"
-      src="option 4"
-    />
+  <div
+    className="position-relative form-check"
+  >
+    <label
+      className="form-check-label"
+    >
+      <label
+        className=""
+      >
+        <input
+          className="form-check-input"
+          name="questionDetailRadio"
+          onChange={[Function]}
+          type="radio"
+        />
+        <img
+          alt="option 4"
+          src="option 4"
+        />
+      </label>
+    </label>
   </div>,
 ]
 `;

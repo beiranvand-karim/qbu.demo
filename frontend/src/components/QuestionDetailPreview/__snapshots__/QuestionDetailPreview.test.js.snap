@@ -8,29 +8,104 @@ Array [
   <h4>
     252
   </h4>,
-  <div>
-    <img
-      alt="option 1"
-      src="option 1"
-    />
-  </div>,
-  <div>
-    <img
-      alt="option 2"
-      src="option 2"
-    />
-  </div>,
-  <div>
-    <img
-      alt="option 3"
-      src="option 3"
-    />
-  </div>,
-  <div>
-    <img
-      alt="option 4"
-      src="option 4"
-    />
-  </div>,
+  <form
+    className=""
+  >
+    <div
+      className="position-relative form-check"
+    >
+      <label
+        className="form-check-label"
+      >
+        <label
+          className=""
+        >
+          <input
+            className="form-check-input"
+            name="questionDetailRadio"
+            onChange={[Function]}
+            type="radio"
+          />
+          <img
+            alt="option 1"
+            src="option 1"
+          />
+        </label>
+      </label>
+    </div>
+    <div
+      className="position-relative form-check"
+    >
+      <label
+        className="form-check-label"
+      >
+        <label
+          className=""
+        >
+          <input
+            className="form-check-input"
+            name="questionDetailRadio"
+            onChange={[Function]}
+            type="radio"
+          />
+          <img
+            alt="option 2"
+            src="option 2"
+          />
+        </label>
+      </label>
+    </div>
+    <div
+      className="position-relative form-check"
+    >
+      <label
+        className="form-check-label"
+      >
+        <label
+          className=""
+        >
+          <input
+            className="form-check-input"
+            name="questionDetailRadio"
+            onChange={[Function]}
+            type="radio"
+          />
+          <img
+            alt="option 3"
+            src="option 3"
+          />
+        </label>
+      </label>
+    </div>
+    <div
+      className="position-relative form-check"
+    >
+      <label
+        className="form-check-label"
+      >
+        <label
+          className=""
+        >
+          <input
+            className="form-check-input"
+            name="questionDetailRadio"
+            onChange={[Function]}
+            type="radio"
+          />
+          <img
+            alt="option 4"
+            src="option 4"
+          />
+        </label>
+      </label>
+    </div>
+    <button
+      aria-label={null}
+      className="btn btn-secondary"
+      onClick={[Function]}
+    >
+      save you answer
+    </button>
+  </form>,
 ]
 `;

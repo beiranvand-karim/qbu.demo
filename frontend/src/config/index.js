@@ -1,5 +1,5 @@
 
-export const port = 8080;
+export const port = 8282;
 export const server = `http://localhost:${port}`;
 
 const config = {
