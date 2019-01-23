@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AnswerListItem /> should matches the snapshot 1`] = `
+<div>
+  <div
+    className="alert alert-primary fade"
+    role="alert"
+  >
+    <h2>
+      question title: 
+      this question title
+    </h2>
+    <div>
+      <strong>
+        you chose: 
+      </strong>
+      <img
+        alt=""
+        src="http://localhost:8282/question/25/2.png"
+      />
+    </div>
+  </div>
+</div>
+`;

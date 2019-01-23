@@ -13,6 +13,8 @@ export class Home extends Component {
          <Link to="/questionListPage">question list page</Link>
          <br/>
          <Link to="/signUp">sign up</Link>
+         <br/>
+         <Link to="/answer">your answers</Link>
       </>
     )
   }

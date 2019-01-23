@@ -31,12 +31,17 @@ public class QuestionServiceImpl implements QuestionService {
     @Override
     public Question findById(Long id) {
         ArrayList<String> options = new ArrayList<>();
-        String port = environment.getProperty("local.server.port");
         Question question = questionRepository.findById(id);
         for (int i = 0; i < question.getOptionsCount(); i++) {
-            options.add("http://localhost:"+ port +"/question/" + question.getId() + "/" + i + ".png");
+            options.add(createOptionAddress(question.getId(), i));
         }
         question.setOptions(options);
         return question;
+    }
+
+    @Override
+    public String createOptionAddress(Long questionId, int optionId) {
+        String port = environment.getProperty("local.server.port");
+        return "http://localhost:"+ port +"/question/" + questionId + "/" + optionId + ".png";
     }
 }

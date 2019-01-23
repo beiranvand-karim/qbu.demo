@@ -32,5 +32,12 @@ Array [
   >
     sign up
   </a>,
+  <br />,
+  <a
+    href="/answer"
+    onClick={[Function]}
+  >
+    your answers
+  </a>,
 ]
 `;

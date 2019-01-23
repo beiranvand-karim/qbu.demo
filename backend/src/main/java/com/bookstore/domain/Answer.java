@@ -1,9 +1,8 @@
 package com.bookstore.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+import javax.persistence.*;
 
 @Entity
 public class Answer {
@@ -15,6 +14,14 @@ public class Answer {
     private Long userId;
     private int selectedOption;
     private Long questionId;
+
+    @JsonInclude
+    @Transient
+    private String option;
+
+    @JsonInclude
+    @Transient
+    private String questionTitle;
 
     public Answer() {
     }
@@ -49,5 +56,21 @@ public class Answer {
 
     public void setQuestionId(Long questionId) {
         this.questionId = questionId;
+    }
+
+    public String getOption() {
+        return option;
+    }
+
+    public void setOption(String option) {
+        this.option = option;
+    }
+
+    public String getQuestionTitle() {
+        return questionTitle;
+    }
+
+    public void setQuestionTitle(String questionTitle) {
+        this.questionTitle = questionTitle;
     }
 }
